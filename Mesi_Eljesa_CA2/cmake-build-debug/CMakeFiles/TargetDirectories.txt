@@ -1,0 +1,3 @@
+C:/Users/eljes/CLionProjects/Mesi_Eljesa_CA2/cmake-build-debug/CMakeFiles/Mesi_Eljesa_CA2.dir
+C:/Users/eljes/CLionProjects/Mesi_Eljesa_CA2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/eljes/CLionProjects/Mesi_Eljesa_CA2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
