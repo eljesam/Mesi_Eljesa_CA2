@@ -1,8 +1,6 @@
-//
-// Created by biava on 10/04/2024.
-//
-#ifndef CA2BIANCAVALICEC_BUG_H
-#define CA2BIANCAVALICEC_BUG_H
+
+#ifndef MESI_ELJESA_CA2_BUG_H
+#define MESI_ELJESA_CA2_BUG_H
 
 #include <utility>
 #include <list>
@@ -49,4 +47,4 @@ public:
         }
     }
 };
-#endif //CA2BIANCAVALICEC_BUG_H
+#endif // MESI_ELJESA_CA2_BUG_H

@@ -1,11 +1,9 @@
-//
-// Created by biava on 10/04/2024.
-//
 
-#ifndef CA2BIANCAVALICEC_HOPPER_H
-#define CA2BIANCAVALICEC_HOPPER_H
 
-#include "../../Downloads/Valicec_Bianca_CA2-master/Valicec_Bianca_CA2-master/Bug.h"
+#ifndef MESI_ELJESA_CA2_HOPPER_H
+#define MESI_ELJESA_CA2_HOPPER_H
+
+#include "Bug.h"
 
 class Hopper : public Bug {
 private:
@@ -26,4 +24,4 @@ public:
 
 };
 
-#endif //CA2BIANCAVALICEC_HOPPER_H
+#endif //MESI_ELJESA_CA2_HOPPER_H

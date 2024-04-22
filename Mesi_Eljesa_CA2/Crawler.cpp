@@ -1,7 +1,6 @@
-//
-// Created by biava on 10/04/2024.
-//
-#include "../../Downloads/Valicec_Bianca_CA2-master/Valicec_Bianca_CA2-master/Crawler.h"
+
+#include "Crawler.h"
+
 
 void Crawler::move() {
 //    A Crawler bug moves according to these rules:

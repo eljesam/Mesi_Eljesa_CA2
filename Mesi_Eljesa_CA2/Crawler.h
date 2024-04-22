@@ -1,11 +1,9 @@
-//
-// Created by biava on 10/04/2024.
-//
 
-#ifndef CA2BIANCAVALICEC_CRAWLER_H
-#define CA2BIANCAVALICEC_CRAWLER_H
 
-#include "../../Downloads/Valicec_Bianca_CA2-master/Valicec_Bianca_CA2-master/Bug.h"
+#ifndef MESI_ELJESA_CA2_CRAWLER_H
+#define MESI_ELJESA_CA2_CRAWLER_H
+
+#include "Bug.h"
 
 class Crawler : public Bug {
 public:
@@ -22,4 +20,4 @@ public:
 
 };
 
-#endif //CA2BIANCAVALICEC_CRAWLER_H
+#endif //MESI_ELJESA_CA2_CRAWLER_H
