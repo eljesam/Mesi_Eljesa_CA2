@@ -11,4 +11,7 @@ add_executable(Mesi_Eljesa_CA2 main.cpp
         Hopper.cpp
         Crawler.cpp
         Bomber.cpp
-        Bomber.h)
+        Bomber.h
+        Board.cpp
+        Cell.h
+        Board.h)
