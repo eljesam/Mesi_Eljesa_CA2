@@ -8,9 +8,7 @@
 
 using namespace std;
 
-enum Direction {
-    North, East, South, West
-};
+
 
 class Bug {
 
