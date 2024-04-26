@@ -38,7 +38,7 @@ int main(){
     readFromFile();
 
     while(true) {
-        cout << "1. Find bugs.txt" << endl;
+        cout << "1. Find bugs" << endl;
          cout<< "2. Display Bugs"<<endl;
         cout << "3. Display bug history" << endl;
         cout << "4. Display cells" << endl;
