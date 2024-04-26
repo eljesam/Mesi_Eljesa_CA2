@@ -14,37 +14,33 @@ enum Direction {
 
 class Bug {
 
-public:
+protected:
     int id;
+    string bugType;
     pair<int, int> position;
     Direction direction;
     int size;
     bool alive;
     list<pair<int, int>> path;
+    int killerId;
+
+public:
 
     virtual void move() = 0;
+    [[nodiscard]] bool isWayBlocked(int dir)const;
+    [[nodiscard]] int getId() const;
+    [[nodiscard]] string getBugType() const;
+    [[nodiscard]] pair<int, int> getPosition() const;
+    [[nodiscard]] int getDirection() const;
+    [[nodiscard]] int getSize() const;
+    [[nodiscard]] bool isAlive() const;
+    [[nodiscard]] list<pair<int, int>>getPath() const;
+    void setSize(int size);
+    void setAlive(bool alive);
+    void setKillerId(int killerId);
+    [[nodiscard]] int getKillerId() const;
 
-    bool isWayBlocked(Direction dir) {
-        if (dir == North) {
-            if (position.second == 0) {
-                return true;
-            }
-        }
-        if (dir == East) {
-            if (position.first == size - 1) {
-                return true;
-            }
-        }
-        if (dir == South) {
-            if (position.second == size - 1) {
-                return true;
-            }
-        }
-        if (dir == West) {
-            if (position.first == 0) {
-                return true;
-            }
-        }
-    }
+
+
 };
 #endif // MESI_ELJESA_CA2_BUG_H
