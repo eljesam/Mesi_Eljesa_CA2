@@ -18,7 +18,7 @@ protected:
     int id;
     string bugType;
     pair<int, int> position;
-    Direction direction;
+    int direction;
     int size;
     bool alive;
     list<pair<int, int>> path;
