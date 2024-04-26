@@ -5,6 +5,7 @@
 #include <sstream>
 #include <algorithm>
 #include <thread>
+#include <cstring>
 #include "Bug.h"
 #include "Crawler.h"
 #include "Hopper.h"
@@ -34,15 +35,15 @@ vector<Bug *> bugs_vector;
 
 
 int main(){
-    Board board(10, 10);
     readFromFile();
 
     while(true) {
-        cout << "1. Find bug by ID" << endl;
-        cout << "2. Display bug history" << endl;
-        cout << "3. Display cells" << endl;
-        cout << "4. Fight" << endl;
-        cout << "5. Exit" << endl;
+        cout << "1. Find bugs.txt" << endl;
+         cout<< "2. Display Bugs"<<endl;
+        cout << "3. Display bug history" << endl;
+        cout << "4. Display cells" << endl;
+        cout << "5. Fight" << endl;
+        cout << "6. Exit" << endl;
         int choice;
         cin >> choice;
         switch (choice) {
@@ -50,15 +51,21 @@ int main(){
                 findBug();
                 break;
             case 2:
-                bugHistory();
+                for(auto bug: bugs_vector) {
+                    printBug(bug);
+                }
                 break;
             case 3:
-                displayCells();
+                bugHistory();
                 break;
             case 4:
-                fight();
+                displayCells();
                 break;
             case 5:
+                fight();
+                return 0;
+
+                case 6:
                 writeFile();
                 return 0;
             default:
@@ -90,15 +97,21 @@ int main(){
 }
 void readFromFile() {
     ifstream file("bugs.txt");
-    if (!file.is_open()) {
-        cout << "File not found" << endl;
-        return;
+
+    if (file) {
+        string line;
+
+        while (getline(file, line)) {
+            parseLine(line);
+        }
+
+        file.close();
+    } else {
+        cout << "Error opening file" << endl;
+        if(errno) {
+            cout << "Error: " << strerror(errno) << endl;
+        }
     }
-    string line;
-    while (getline(file, line)) {
-        parseLine(line);
-    }
-    file.close();
 }
 void parseLine(const string &strline) {
     stringstream line(strline);
@@ -250,7 +263,7 @@ void displayCells(){
                 }
             }
             if (!bugOnBoard ) {
-                cout << "No bugs on the board";
+                cout << "No bugs.txt on the board";
             }
             cout << endl;
         }
