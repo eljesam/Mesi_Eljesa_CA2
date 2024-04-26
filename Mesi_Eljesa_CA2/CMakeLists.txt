@@ -13,6 +13,5 @@ add_executable(Mesi_Eljesa_CA2 main.cpp
         Bomber.cpp
         Bomber.h
         Board.cpp
-        Cell.h
         Board.h
-        Cell.cpp)
+)

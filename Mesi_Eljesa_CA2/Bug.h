@@ -35,5 +35,6 @@ public:
     void setAlive(bool alive);
     void setKillerId(int killerId);
     [[nodiscard]] int getKillerId() const;
+    list<pair<int, int>> getHistory();
 };
 #endif // MESI_ELJESA_CA2_BUG_H

@@ -4,24 +4,27 @@
 
 #ifndef MESI_ELJESA_CA2_BOARD_H
 #define MESI_ELJESA_CA2_BOARD_H
-
-
-#include <vector>
-#include "Cell.h"
+#include<vector>
+#include "Bug.h"
 
 class Board {
-private:
-    std::vector<std::vector<Cell>> grid;
+    private:
+        vector<vector<string>> cells;
+        vector<Bug*> bugs;
 public:
-    Board(int width, int height);
+    Board();
+    static void displayBugs(Bug *bug);
+    void findBug(int id);
+    void displayBugHistory();
+    void displayCells();
+    void tapBoard();
+    void addBug(Bug *bug);
+    void getBugs();
+    int countBugs();
 
-    Cell getCell(int x, int y) const;
+    vector<vector<Bug *>> getBugsVector();
 
-    void setCell(int x, int y, const Cell& cell);
-
-    int getWidth() const;
-
-    int getHeight() const;
+    void moveBugs();
+    void fight();
 };
-
 #endif //MESI_ELJESA_CA2_BOARD_H
