@@ -14,13 +14,14 @@ class Board {
 public:
     Board();
     static void displayBugs(Bug *bug);
-    void findBug(int id);
-    void displayBugHistory();
-    void displayCells();
-    void tapBoard();
-    void addBug(Bug *bug);
-    void getBugs();
-    int countBugs();
+
+   void findBug(int id);
+   void displayBugHistory(int i);
+   void displayCells();
+   void tapBoard();
+   void addBug(Bug *bug);
+   void getBugs();
+   int countBugs();
 
     vector<vector<Bug *>> getBugsVector();
 

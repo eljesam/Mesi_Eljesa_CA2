@@ -27,50 +27,57 @@ int main() {
     readFromFile(board);
 
     while (true) {
-        cout << "0. Exit" << endl;
+        cout << "0. Start Fight" << endl;
         cout << "1. Display bugs" << endl;
         cout << "2. Find bug" << endl;
         cout << "3. Bug history" << endl;
         cout << "4. Display cells" << endl;
-        cout << "5. Tap board" << endl;
+        cout << "5. See Bugs Total" << endl;
+        cout << "6. Exit" << endl;
 
         int choice;
         cin >> choice;
 
         switch (choice) {
             case 0:
-                return 0; // Exit the program
+              //start fight
+                board->tapBoard();
+                break;
             case 1:
+                // Display bugs
                 board->getBugs();
                 break;
             case 2:
-                cout << "Enter bug id: ";
+                // Find bug
                 int id;
+                cout << "Enter bug id: ";
                 cin >> id;
                 board->findBug(id);
                 break;
             case 3:
-                board->displayBugHistory();
+                // Bug history
+                int id2;
+                cout << "Enter bug id: ";
+                cin >> id2;
+                board->displayBugHistory(id2);
                 break;
             case 4:
+                // Display cells
                 board->displayCells();
                 break;
             case 5:
-                // Start simulation
-                while (board->countBugs() !=
-                       1) {
-                    // Perform bug movements
-                    board->tapBoard();
-                    // Wait for one second before the next simulation step
-                    std::this_thread::sleep_for(std::chrono::seconds(1));
-                }
+                // See Bugs Total
+                 cout << "Total bugs: " << board->countBugs() << endl;
+                break;
+            case 6:
+                // Exit
 
-                // Write endgame history
+
                 writeFile(board);
 
                 delete board;
 
-                return 0; // Exit after simulation ends
+                return 0;
             default:
                 cout << "Invalid choice" << endl;
         }
