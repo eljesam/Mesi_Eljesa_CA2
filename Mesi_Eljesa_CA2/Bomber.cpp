@@ -66,4 +66,5 @@ void Bomber::move() {
         }
 
     }
+    path.push_back(position);
 }

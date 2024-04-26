@@ -1,12 +1,17 @@
 
 #include "Hopper.h"
 
+int Hopper::getHopLength() const {
+    return hopLength;
+}
+
+
 void Hopper::move() {
 
 
     if (isWayBlocked(direction)) {
         while (isWayBlocked(direction)) {
-            //set a new direction at random from 1 - 4
+
             direction = (rand() % 4 + 1);
         }
     }
@@ -44,6 +49,4 @@ void Hopper::move() {
     }
 
     path.push_back(position);
-    }
 }
-

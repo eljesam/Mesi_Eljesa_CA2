@@ -1,54 +1,61 @@
 #include <string>
 #include "Bug.h"
 
-bool Bug::isWayBlocked(int dir) const{
-    if(dir==1 && position.second==0){
+
+bool Bug::isWayBlocked(int dir) const {
+    if (dir==1 && position.second == 0) {
         return true;
-    }
-    else if (dir==2 && position.first ==9)
-    {
+    } else if (dir==2 && position.first == 9) {
         return true;
-    }
-    else if (dir==3 && position.second ==9){
+    } else if (dir==3 && position.second == 9) {
         return true;
-    }
-    else if (dir==4 && position.first ==0){
+    } else if (dir==4 && position.first == 0) {
         return true;
-    }
-    else{
+    } else {
         return false;
     }
 }
-int Bug::getId() const{
+
+int Bug::getId() const {
     return id;
 }
+
 string Bug::getBugType() const {
     return bugType;
 }
-pair<int, int>Bug::getPosition() const{
+
+pair<int, int> Bug::getPosition() const {
     return position;
 }
-int Bug::getDirection() const{
+
+int Bug::getDirection() const {
     return direction;
 }
-int Bug::getSize() const{
+
+int Bug::getSize() const {
     return size;
 }
-bool Bug::isAlive() const{
+
+bool Bug::isAlive() const {
     return alive;
 }
-list<pair<int, int>>Bug::getPath() const{
+
+list<pair<int, int>> Bug::getPath() const {
     return path;
 }
-void Bug::setSize(int size){
-    Bug::size=size;
+
+void Bug::setSize(int size) {
+    Bug::size = size;
 }
-void Bug::setAlive(bool alive){
-    Bug::alive=alive;
+
+void Bug::setAlive(bool alive) {
+    Bug::alive = alive;
 }
-void Bug::setKillerId(int killerId){
+
+void Bug::setKillerId(int killerId) {
     Bug::killerId = killerId;
 }
-int Bug::getKillerId()const{
+
+int Bug::getKillerId() const {
     return killerId;
 }

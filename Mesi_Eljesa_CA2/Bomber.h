@@ -4,7 +4,7 @@
 // Bomber class is a child class of Bug class
 #include <string>
 #include "Bug.h"
-// Bomber class inherits all the attributes and methods from Bug class
+
 class Bomber : public Bug {
 private:
     bool exploded = false;

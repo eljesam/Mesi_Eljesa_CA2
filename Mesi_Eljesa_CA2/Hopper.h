@@ -19,11 +19,9 @@ public:
         this->alive = true;
         this->hopLength = hopLength;
     }
-    [[nodiscard]] int getHopLength() const ;
+
+    [[nodiscard]] int getHopLength() const;
 
     void move() override;
-
-
 };
-
 #endif //MESI_ELJESA_CA2_HOPPER_H
